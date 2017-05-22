@@ -1,0 +1,23 @@
+5/21/17 Keywords: Update, TinyFlash library
+
+I am trying to organize my documentation on the StarPainting.
+Here are the major milestones:
+1. Version 1 of the painting used a 555 timer to turn on and off the different color LEDs
+2. Some years later I upgraded the painting using a TLC5971 board. This board can control the brightness of the LEDs.
+	I used a Trinket microcontroller to communicate with the TLC5971. There was an Arduino library for using the LTC5971
+	but it only worked on full size Arduinos such as UNOs. So I took an Adafruit library called TinyFlashLibrary which
+	has some SPI (serial peripehery interface) functions and modified it to work with the TLC5971.
+	
+	The modified TinyFlash library is located in Code\Libraries\ModifiedByMe\Adafruit_TinyFlash.
+	I started to create a separate library called Trinket_TLC_LED that would be only for the Trinket and TLC5971 but
+	I never completed it.
+	
+	I also added an external controller for the painting which turns on the painting automatically when it is dark
+	and motion is detected. This controller is run by a separate Trinket.
+	
+So at this point, the code files in use are: 
+
+Code\StarPaintingLED_Trinket\StarPaintingLED_Trinket.ino
+Code\Libraries\ModifiedByMe\Adafruit_TinyFlash
+
+and I used Arduino IDE 1.6.4
