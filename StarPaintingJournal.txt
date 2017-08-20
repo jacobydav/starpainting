@@ -21,3 +21,8 @@ Code\StarPaintingLED_Trinket\StarPaintingLED_Trinket.ino
 Code\Libraries\ModifiedByMe\Adafruit_TinyFlash
 
 and I used Arduino IDE 1.6.4
+
+7/13/2017
+
+The code for the relay box that turns on the painting is StarPaintingRelayTrinket.ino.
+It turns on the painting when motion is detected and it is dark outside.
